@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontAwsome/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body >
+    <h2 class="title text-center text-info display-5 mt-5">Welcome to To-Do app</h2>
+    <button id="modalBtn" class="btn btn-primary btn-block col-3 mt-5 mx-auto">Add tasks</button>
+    
+    <div id="modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add task</h5>
+              <button type="button" onclick="showModalFunction()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="container col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Add task</label>
+                                <input type="text" id="taskInput" placeholder="Add task" class="form-control">
+            
+                                <div id = "invalidData" class="alert alert-danger none">
+                                    Please enter a valid data
+                                    <button id="closeBtn" type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+            
+                                <div id = "invalidData2" class="alert alert-danger none">
+                                    Please enter more than 3 characters
+                                    <button id="closeBtn2" type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+            
+                                <div id = "invalidData3" class="alert alert-danger none">
+                                    Please enter less than 20 characters
+                                    <button id="closeBtn3" type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button id="addBtn" class="btn btn-primary btn-block">Add task</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" onclick="showModalFunction()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container col-md-8 mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div id="allTasks">
+
+                </div>
+                <div id="noTasks" class="alert alert-danger">
+                    <h4 class="text-center">No tasks added yet</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="switchBtn" class="btn btn-dark btn-block mx-auto mt-5 col-2">Dark mode</button>
+
+
+
+
+
+
+    <script src="./fontAwsome/all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
